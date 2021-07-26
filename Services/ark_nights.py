@@ -140,7 +140,7 @@ class ArkHeadhunt:
 
     def update_content(self):
         with open('Services/util/agent.json', 'w+', encoding='utf8') as file:
-            dump(self.agent_dict, file, indent=4)
+            dump(self.agent_dict, file, indent=4, ensure_ascii=False)
 
     def clear_ups(self):
         self.agent_dict['UP3'] = []
